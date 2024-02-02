@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 867883178}
   - component: {fileID: 867883181}
   - component: {fileID: 867883180}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,10 +722,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMove: 10
-  jumpForce: 12
+  jumpForce: 18
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   countJump: 1
   rb: {fileID: 867883178}
   isMoveLeft: 0
@@ -1256,7 +1256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903289971}
   - component: {fileID: 1903289972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
