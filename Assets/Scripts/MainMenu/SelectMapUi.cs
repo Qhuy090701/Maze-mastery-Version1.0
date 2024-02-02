@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SelectMap : MonoBehaviour {
+public class SelectMapUi : MonoBehaviour {
   [SerializeField] private SelectMapData selectMapData;
 
   public void SelectMapIndex(int mapIndex) {

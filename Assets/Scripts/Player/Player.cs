@@ -12,7 +12,11 @@ public class Player : MonoBehaviour {
 
   [Header("Component")] public Rigidbody2D rb;
   public RaycastHit2D hit;
-
+  
+  [Header("Move")] public bool isMoveLeft;
+  public bool isMoveRight;
+  
+  [Header("Velocity")] public float velocityX;
   private void OnValidate() {
     if (rb == null) {
       rb = GetComponent<Rigidbody2D>();

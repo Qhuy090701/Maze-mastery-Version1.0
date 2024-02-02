@@ -12,8 +12,15 @@ public class PlayerMove : MonoBehaviour {
     }
   }
 
+  private void Start() {
+    player.isMoveLeft = false;
+    player.isMoveRight = false;
+  }
+
   private void Update() {
+    //Movenment();
     CheckGround();
+    MovenmentWithKetCode();
   }
 
   public void Jump() {
@@ -28,4 +35,33 @@ public class PlayerMove : MonoBehaviour {
     player.countJump = player.hit.collider != null ? 1 : 0;
     return player.hit.collider != null;
   }
+  
+  public void Movenment() {
+    if (player.isMoveLeft) {
+      player.rb.velocity = new Vector2(-player.speedMove, player.rb.velocity.y);
+    } else if (player.isMoveRight) {
+      player.rb.velocity = new Vector2(player.speedMove, player.rb.velocity.y);
+    } else {
+      player.rb.velocity = new Vector2(0, player.rb.velocity.y);
+    }
+  }
+  
+  public void MovenmentWithKetCode() {
+    float targetVelocityX = 0;
+    if (Input.GetKey(KeyCode.A)) {
+      targetVelocityX = -player.speedMove;
+    } else if (Input.GetKey(KeyCode.D)) {
+      targetVelocityX = player.speedMove;
+    }
+
+    player.rb.velocity = new Vector2(
+      Mathf.SmoothDamp(player.rb.velocity.x, targetVelocityX, ref player.velocityX, 0.1f),
+      player.rb.velocity.y
+    );
+  }
+  
+  public void PointerDownLeft() => player.isMoveLeft = true;
+  public void PointerUpLeft() => player.isMoveLeft = false;
+  public void PointerDownRight() => player.isMoveRight = true;
+  public void PointerUpRight() => player.isMoveRight = false;
 }
