@@ -1,18 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Trap : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class Trap : MonoBehaviour {
+  [SerializeField] protected float raycastHeight = 0.1f;
+  [SerializeField] protected float raycastWidth = 0.5f;
+  [SerializeField] protected float distance = 0.1f;
+  [SerializeField] protected LayerMask playerLayer;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  protected virtual void Update() {
+    RaycastCheck();
+  }
+
+  protected virtual void RaycastCheck() {
+  }
 }

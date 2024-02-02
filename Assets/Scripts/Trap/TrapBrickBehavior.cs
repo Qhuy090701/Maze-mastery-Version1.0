@@ -1,13 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
-public class TrapBrickBehavior : MonoBehaviour {
+public class TrapBrickBehavior : Trap {
   [SerializeField] private SpriteRenderer spriteRenderer;
-  [SerializeField] private LayerMask playerLayer;
-  [SerializeField] private float distance;
   [SerializeField] private Rigidbody2D rb;
-  [SerializeField] private float raycastWidth = 0.5f;
-  [SerializeField] private float raycastHeight = 0.1f;
   [SerializeField] private float timeToDestroy = 2f;
 
   private void OnValidate() {
@@ -20,11 +16,7 @@ public class TrapBrickBehavior : MonoBehaviour {
     rb.bodyType = RigidbodyType2D.Kinematic;
   }
 
-  private void Update() {
-    RaycastCheck();
-  }
-
-  private void RaycastCheck() {
+  protected override void RaycastCheck() {
     RaycastHit2D hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
     RaycastHit2D hitdown = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.down, distance, playerLayer);
 
