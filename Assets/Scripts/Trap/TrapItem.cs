@@ -13,7 +13,8 @@ public class TrapItem : Trap {
 
   [SerializeField] private SpriteRenderer spriteRenderer;
   [SerializeField] private int countHealth;
-  [SerializeField] private GameObject item;
+  [SerializeField] private GameObject itemTrap;
+  [SerializeField] private GameObject itemCoin;
   [SerializeField] private Transform pointToSpawn;
 
   private bool itemSpawned = false;
@@ -46,14 +47,16 @@ public class TrapItem : Trap {
         isCollided = true;
         return;
       }
-      if (!playerCollided) {
+      if ( countHealth > 0 && !playerCollided) {
         countHealth--;
         playerCollided = true;
+        GameObject spawnedItem = Instantiate(itemCoin, transform.position, Quaternion.identity);
+        spawnedItem.transform.DOMove(pointToSpawn.position, 1f);
       }
       if(countHealth <= 0 && !itemSpawned) {
         countHealth = 0;
         for (int i = 0; i < countspawn; i++) {
-          GameObject spawnedItem = Instantiate(item, transform.position, Quaternion.identity);
+          GameObject spawnedItem = Instantiate(itemTrap, transform.position, Quaternion.identity);
           spawnedItem.transform.DOMove(pointToSpawn.position, 1f);
         }
         itemSpawned = true;

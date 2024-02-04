@@ -787,6 +787,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8389858670209193419, guid: 2d791821b5b243b4fa83776b201b56c0, type: 3}
+      propertyPath: itemCoin
+      value: 
+      objectReference: {fileID: 3259242527170451126, guid: baf19f97693ed854eb055c1fde2dda0d, type: 3}
+    - target: {fileID: 8389858670209193419, guid: 2d791821b5b243b4fa83776b201b56c0, type: 3}
+      propertyPath: itemTrap
+      value: 
+      objectReference: {fileID: 7737066159457786228, guid: 2acb13b0eccbfc44997441d40e2db200, type: 3}
+    - target: {fileID: 8389858670209193419, guid: 2d791821b5b243b4fa83776b201b56c0, type: 3}
       propertyPath: trapItemState
       value: 0
       objectReference: {fileID: 0}
