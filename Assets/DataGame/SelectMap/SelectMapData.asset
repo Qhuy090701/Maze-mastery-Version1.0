@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e59a87760fc17748a1bc10b4a41d55a, type: 3}
   m_Name: SelectMapData
   m_EditorClassIdentifier: 
-  currentMapIndex: 1
+  currentMapIndex: 0
   MapData:
   - {fileID: 11400000, guid: 2b79956c1793af046ad16958b6a9d1ba, type: 2}
   - {fileID: 11400000, guid: 1dfc5d917b83f8947aacc350cddeaf12, type: 2}
