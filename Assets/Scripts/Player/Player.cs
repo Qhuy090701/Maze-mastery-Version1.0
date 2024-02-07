@@ -17,6 +17,11 @@ public class Player : MonoBehaviour {
   public bool isMoveRight;
   
   [Header("Velocity")] public float velocityX;
+  
+  [Header("Raycast")]
+  public float raycastHeight = 0.1f;
+  public float raycastWidth = 0.5f;
+  public float distance = 0.1f;
   private void OnValidate() {
     if (rb == null) {
       rb = GetComponent<Rigidbody2D>();

@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 7737066159457786235}
   - component: {fileID: 6372963743956021914}
   m_Layer: 0
-  m_Name: ItemTrapSpawn
+  m_Name: MissileTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  itemTrapState: 1
+  itemTrapState: 0
   missileItem: {fileID: 5206613700554659912, guid: b0af4d4b67b0fd84984bf19b10d9e271, type: 3}
   heartItem: {fileID: 7126134845563495222, guid: 03c6f8af0cd03ec46a47a195e4182a3b, type: 3}
   pointToSpawnMissile: {fileID: 8343904896742912322}

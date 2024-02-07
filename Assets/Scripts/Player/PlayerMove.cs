@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour {
   }
   
   public bool CheckGround() {
-    player.hit = Physics2D.Raycast(transform.position, Vector2.down, 0.55f, player.groundLayer);
+    player.hit = Physics2D.BoxCast(transform.position, new Vector2(player.raycastWidth, player.raycastHeight), 0f, Vector2.down, player.distance, player.groundLayer);
     player.countJump = player.hit.collider != null ? 1 : 0;
     return player.hit.collider != null;
   }
