@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a4678c5cddabd45b4627c89f33f7f6, type: 3}
   m_Name: Map1
   m_EditorClassIdentifier: 
+  startPoint: {x: 0, y: 0, z: 0}
+  checkPoint: {x: 0, y: 0, z: 0}
   currentLevel: 0
   prefabs: {fileID: 7386286981071271757, guid: bb17dcd92640f6e47b99ae1d15c86342, type: 3}
+  isUnlocked: 1
+  imgLocked: {fileID: 0}
