@@ -37,7 +37,7 @@ public class ItemTrap : Trap {
         default:
           throw new ArgumentOutOfRangeException();
       }
-      spawnedItem.transform.DOMove(hitup.transform.position, 1f);
+      spawnedItem.transform.DOMove(hitup.transform.position, 0.5f);
       itemSpawned = true;
     }
   }

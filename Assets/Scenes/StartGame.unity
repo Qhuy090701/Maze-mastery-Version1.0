@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPos: {fileID: 867883177}
+  canvas: {fileID: 2028045840}
 --- !u!4 &288941510
 Transform:
   m_ObjectHideFlags: 0
@@ -728,6 +729,7 @@ MonoBehaviour:
     m_Bits: 136
   countJump: 1
   rb: {fileID: 867883178}
+  isMove: 1
   isMoveLeft: 0
   isMoveRight: 0
   velocityX: 0

@@ -1,11 +1,20 @@
 using UnityEngine;
 
 public class DrainTrap : Trap {
+  public TrapType trapType;
+  public enum TrapType {
+    Drain,
+    Teleport
+  }
   [SerializeField] private Transform pointTeleport;
-
   private void Update() {
-    base.Update();
-    RaycastCheck();
+    switch (trapType) {
+      case TrapType.Drain:
+        break;
+      case TrapType.Teleport:
+        RaycastCheck();
+        break;
+    }
   }
 
   protected override void RaycastCheck() {

@@ -48,16 +48,18 @@ public class PlayerMove : MonoBehaviour {
   
   public void MovenmentWithKetCode() {
     float targetVelocityX = 0;
-    if (Input.GetKey(KeyCode.A)) {
-      targetVelocityX = -player.speedMove;
-    } else if (Input.GetKey(KeyCode.D)) {
-      targetVelocityX = player.speedMove;
-    }
+    if (player.isMove == true) {
+      if (Input.GetKey(KeyCode.A)) {
+        targetVelocityX = -player.speedMove;
+      } else if (Input.GetKey(KeyCode.D)) {
+        targetVelocityX = player.speedMove;
+      }
 
-    player.rb.velocity = new Vector2(
-      Mathf.SmoothDamp(player.rb.velocity.x, targetVelocityX, ref player.velocityX, 0.1f),
-      player.rb.velocity.y
-    );
+      player.rb.velocity = new Vector2(
+        Mathf.SmoothDamp(player.rb.velocity.x, targetVelocityX, ref player.velocityX, 0.1f),
+        player.rb.velocity.y
+      );
+    }
   }
   
   public void PointerDownLeft() => player.isMoveLeft = true;

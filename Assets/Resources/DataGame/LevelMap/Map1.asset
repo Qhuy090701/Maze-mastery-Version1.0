@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a4678c5cddabd45b4627c89f33f7f6, type: 3}
+  m_Name: Map1
+  m_EditorClassIdentifier: 
+  startPoint: {x: 0, y: 0, z: 0}
+  checkPoint: {x: 0, y: 0, z: 0}
+  currentLevel: 0
+  prefabs: {fileID: 7386286981071271757, guid: bb17dcd92640f6e47b99ae1d15c86342, type: 3}
+  isUnlocked: 1
+  imgLocked: {fileID: 0}
