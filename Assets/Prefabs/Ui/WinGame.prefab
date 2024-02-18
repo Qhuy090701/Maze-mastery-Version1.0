@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4960196514265489147}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8395703271086374978}
+        m_TargetAssemblyTypeName: WinUi, Assembly-CSharp
+        m_MethodName: PlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4960196514548694401
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +255,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4960196514548694402}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8395703271086374978}
+        m_TargetAssemblyTypeName: WinUi, Assembly-CSharp
+        m_MethodName: WinGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1374162477430341199}
+        m_TargetAssemblyTypeName: SelectUi, Assembly-CSharp
+        m_MethodName: SelectUiCanvas
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3260258785516263236, guid: abeb153414888a94794d2b160b2732a3, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4960196515225797361
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +291,8 @@ GameObject:
   - component: {fileID: 4960196515225797360}
   - component: {fileID: 4960196515225797362}
   - component: {fileID: 4960196515225797363}
+  - component: {fileID: 8395703271086374978}
+  - component: {fileID: 1374162477430341199}
   m_Layer: 5
   m_Name: WinGame
   m_TagString: Untagged
@@ -322,6 +360,31 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8395703271086374978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960196515225797361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9177bb1f36ce3b448a8219360011c1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1374162477430341199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960196515225797361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60671739c180514f9aa7933ddb88b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectMapData: {fileID: 11400000, guid: fc39264d8f1396247a92463c9a00abc4, type: 2}
 --- !u!1 &4960196515533518496
 GameObject:
   m_ObjectHideFlags: 0
