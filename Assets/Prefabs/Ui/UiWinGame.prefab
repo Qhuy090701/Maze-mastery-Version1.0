@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 8395703271086374978}
   - component: {fileID: 1374162477430341199}
   m_Layer: 5
-  m_Name: WinGame
+  m_Name: UiWinGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
