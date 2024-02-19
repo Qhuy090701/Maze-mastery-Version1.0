@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour {
   }
 
   private void Update() {
-    Movenment();
+    //Movenment();
     CheckGround();
     MovenmentWithKetCode();
   }

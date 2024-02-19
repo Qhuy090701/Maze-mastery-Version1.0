@@ -5,6 +5,13 @@ using UnityEngine;
 using DG.Tweening;
 
 public class WinObject : MonoBehaviour {
+  public WinState winState;
+
+  public enum WinState {
+    lose,
+    win,
+  }
+
   [SerializeField] private GameObject winUi;
   [SerializeField] private Canvas canvas;
   [SerializeField] private int nextLevelUnlock;
@@ -21,6 +28,15 @@ public class WinObject : MonoBehaviour {
     }
   }
 
+  private void Update() {
+    if (winState == WinState.win) {
+      StartMoveEffect();
+    }
+    else if (winState == WinState.lose) {
+      Checkdistance();
+    }
+  }
+  
   private void StartMoveEffect() {
     float originalY = transform.position.y;
     DOTween.Sequence()
@@ -31,8 +47,13 @@ public class WinObject : MonoBehaviour {
 
   private void OnTriggerEnter2D(Collider2D other) {
     if (other.CompareTag(Constants.Tag_Player)) {
-      ShowWinUI();
-      UnlockNextLevel();
+      if (winState == WinState.lose) {
+        PlayerLose();
+      }
+      else if (winState == WinState.win) {
+        ShowWinUI();
+        UnlockNextLevel();
+      }
     }
   }
 
@@ -43,5 +64,25 @@ public class WinObject : MonoBehaviour {
 
   public void UnlockNextLevel() {
     selectMapData.MapData[nextLevelUnlock].isUnlocked = true;
+  }
+
+  public void Checkdistance() {
+    if (Vector2.Distance(transform.position, RfHolder.Ins.player.transform.position) < 1) {
+      ShowWinUI();
+      UnlockNextLevel();
+    }
+  }
+
+  public void PlayerLose() {
+    if (RfHolder.Ins.player.playerData.maxHealth > 1) {
+      RfHolder.Ins.player.playerData.maxHealth--;
+      RfHolder.Ins.playerHealth.UpdateHealth();
+      UnityEngine.SceneManagement.SceneManager.LoadScene(Constants.Scene_StartGame);
+    }
+    else {
+      RfHolder.Ins.player.playerData.maxHealth = 5;
+      RfHolder.Ins.playerHealth.UpdateHealth();
+      UnityEngine.SceneManagement.SceneManager.LoadScene(Constants.Scene_StartGame);
+    }
   }
 }
