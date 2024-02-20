@@ -4,8 +4,8 @@ using UnityEngine;
 using DG.Tweening;
 
 public class TrapItem : Trap {
-
   public TrapItemState trapItemState;
+
   public enum TrapItemState {
     noHide,
     Hide
@@ -24,6 +24,7 @@ public class TrapItem : Trap {
   private void OnValidate() {
     if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
   }
+
   private void Update() {
     base.Update();
     RaycastCheck();
@@ -45,27 +46,31 @@ public class TrapItem : Trap {
     RaycastHit2D hitleft = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.left, distance, playerLayer);
     RaycastHit2D hitright = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.right, distance, playerLayer);
     Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
-    if (hitup.collider != null || hitleft.collider != null || hitright.collider != null){
+    if (hitdown.collider != null || hitup.collider != null || hitleft.collider != null || hitright.collider != null) {
       if (trapItemState == TrapItemState.Hide && !isCollided) {
         isCollided = true;
       }
     }
-    if (hitdown.collider != null){
+
+    if (hitdown.collider != null) {
       if (!playerCollided) {
         countHealth--;
         playerCollided = true;
         if (countHealth > 0) {
           GameObject spawnedItem = Instantiate(itemCoin, transform.position, Quaternion.identity);
           spawnedItem.transform.DOMove(pointToSpawn.position, 1f);
-        } else if(countHealth <= 0 && !itemSpawned) {
+        }
+        else if (countHealth <= 0 && !itemSpawned) {
           for (int i = 0; i < countspawn; i++) {
             GameObject spawnedItem = Instantiate(itemTrap, transform.position, Quaternion.identity);
             spawnedItem.transform.DOMove(pointToSpawn.position, 0.5f);
           }
+
           itemSpawned = true;
         }
       }
-    } else {
+    }
+    else {
       playerCollided = false;
     }
   }
