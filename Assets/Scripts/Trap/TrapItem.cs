@@ -45,24 +45,25 @@ public class TrapItem : Trap {
     RaycastHit2D hitleft = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.left, distance, playerLayer);
     RaycastHit2D hitright = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.right, distance, playerLayer);
     Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
-    if (hitup.collider != null || hitdown.collider != null || hitleft.collider != null || hitright.collider != null){
+    if (hitup.collider != null || hitleft.collider != null || hitright.collider != null){
       if (trapItemState == TrapItemState.Hide && !isCollided) {
         isCollided = true;
-        return;
       }
-      if (hitdown.collider != null && countHealth > 0 && !playerCollided) {
+    }
+    if (hitdown.collider != null){
+      if (!playerCollided) {
         countHealth--;
         playerCollided = true;
-        GameObject spawnedItem = Instantiate(itemCoin, transform.position, Quaternion.identity);
-        spawnedItem.transform.DOMove(pointToSpawn.position, 1f);
-      }
-      if(countHealth <= 0 && !itemSpawned) {
-        countHealth = 0;
-        for (int i = 0; i < countspawn; i++) {
-          GameObject spawnedItem = Instantiate(itemTrap, transform.position, Quaternion.identity);
-          spawnedItem.transform.DOMove(pointToSpawn.position, 0.5f);
+        if (countHealth > 0) {
+          GameObject spawnedItem = Instantiate(itemCoin, transform.position, Quaternion.identity);
+          spawnedItem.transform.DOMove(pointToSpawn.position, 1f);
+        } else if(countHealth <= 0 && !itemSpawned) {
+          for (int i = 0; i < countspawn; i++) {
+            GameObject spawnedItem = Instantiate(itemTrap, transform.position, Quaternion.identity);
+            spawnedItem.transform.DOMove(pointToSpawn.position, 0.5f);
+          }
+          itemSpawned = true;
         }
-        itemSpawned = true;
       }
     } else {
       playerCollided = false;

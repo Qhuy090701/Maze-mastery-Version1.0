@@ -301,6 +301,7 @@ MonoBehaviour:
   canvas: {fileID: 2028045840}
   playerHealth: {fileID: 867883182}
   player: {fileID: 867883181}
+  playerMove: {fileID: 867883180}
 --- !u!4 &288941510
 Transform:
   m_ObjectHideFlags: 0
@@ -591,7 +592,7 @@ MonoBehaviour:
   isMoveRight: 0
   velocityX: 0
   raycastHeight: 0.5
-  raycastWidth: 0.5
+  raycastWidth: 1
   distance: 0.5
   playerData: {fileID: 11400000, guid: 5196d310e79e58c4eaca98f252bb5c4e, type: 2}
 --- !u!114 &867883182
@@ -791,7 +792,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cabc2426db34b584eb36d737d64e500b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f5a3709c3cd9f6449b1869f2d21748b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -890,7 +891,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 692, y: 22}
+  m_AnchoredPosition: {x: 692, y: -0.0002441406}
   m_SizeDelta: {x: -104.69, y: 145.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511786788
@@ -969,7 +970,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eed092d0c63ac3f4785d0e0a5f2b00de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b454dc5aa416c8a4e84f77229627aec8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1136,7 +1137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 60a5bf0401bfcb54e9cee41f61878c3c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9cd9ff434df84d14fba89026e7fe79e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

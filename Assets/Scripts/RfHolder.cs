@@ -8,6 +8,7 @@ public class RfHolder : Singleton<RfHolder> {
  public Canvas canvas;
  public PlayerHealth playerHealth;
  public Player player;
+ public PlayerMove playerMove;
 
  private void OnValidate() {
   if (playerPos == null) {
@@ -24,6 +25,10 @@ public class RfHolder : Singleton<RfHolder> {
   
   if (player == null) {
    player = FindObjectOfType<Player>();
+  }
+  
+  if (playerMove == null) {
+   playerMove = FindObjectOfType<PlayerMove>();
   }
  }
 }
