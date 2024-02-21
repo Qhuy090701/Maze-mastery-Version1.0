@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrapElevator : Trap {
   public ElevatorState elevatorState;
+  public MovementType movementType;
 
   public enum ElevatorState {
     NoneTrap,
@@ -11,67 +12,54 @@ public class TrapElevator : Trap {
     TrapTeleport
   }
 
+  public enum MovementType {
+    DontMove,
+    MoveAToB,
+    MoveTriangle
+  }
+
   [SerializeField] private float speed;
   [SerializeField] private Transform pointA;
   [SerializeField] private Transform pointB;
-  [SerializeField] private Transform pointC; 
+  [SerializeField] private Transform pointC;
   [SerializeField] private Transform teleportPoint;
   private bool movingToA = true;
 
   private void Update() {
     switch (elevatorState) {
       case ElevatorState.NoneTrap:
-        TrapElevatorMovement();
-        break;
       case ElevatorState.Trap:
-        TrapMoveOn();
-        break;
       case ElevatorState.TrapTeleport:
-        Teleport();
+        switch (movementType) {
+          case MovementType.DontMove:
+            break;
+          case MovementType.MoveAToB:
+            MoveAToB();
+            break;
+          case MovementType.MoveTriangle:
+            MoveTriangle();
+            break;
+        }
         break;
     }
 
     base.Update();
   }
 
-  private void TrapElevatorMovement() {
-    if (elevatorState == ElevatorState.NoneTrap) {
-      Vector3 targetPosition = movingToA ? pointA.position : pointB.position;
-      Vector3 currentPosition = transform.position;
-      currentPosition = Vector3.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
-      transform.position = currentPosition;
+  private void MoveAToB() {
+    Vector3 targetPosition = movingToA ? pointA.position : pointB.position;
+    Vector3 currentPosition = transform.position;
+    currentPosition = Vector3.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
+    transform.position = currentPosition;
 
-      if (currentPosition == targetPosition) {
-        movingToA = !movingToA;
-      }
+    if (currentPosition == targetPosition) {
+      movingToA = !movingToA;
     }
   }
 
-  protected override void RaycastCheck() {
-    RaycastHit2D hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
-    if (hitup.collider != null) {
-      hitup.transform.SetParent(transform);
-    }
-    else {
-      transform.DetachChildren();
-    }
-  }
+  private int currentPoint = 0;
 
-  private void TrapMoveOn() {
-    raycastWidth = 0.5f;
-    raycastHeight = 0.5f;
-    RaycastHit2D hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
-    if (hitup.collider != null) {
-      Destroy(hitup.collider.gameObject);
-    }
-  }
-  
-
-  private int currentPoint = 0; 
-
-  private void Teleport() {
-    RaycastHit2D hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
-
+  private void MoveTriangle() {
     Vector3 targetPosition;
     switch (currentPoint) {
       case 0:
@@ -95,7 +83,29 @@ public class TrapElevator : Trap {
     if (currentPosition == targetPosition) {
       currentPoint = (currentPoint + 1) % 3;
     }
+  }
 
+  protected override void RaycastCheck() {
+    RaycastHit2D hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
+    if (hitup.collider != null) {
+      hitup.transform.SetParent(transform);
+    }
+    else {
+      transform.DetachChildren();
+    }
+  }
+
+  private void TrapMoveOn() {
+    raycastWidth = 0.5f;
+    raycastHeight = 0.5f;
+    RaycastHit2D hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
+    if (hitup.collider != null) {
+      Destroy(hitup.collider.gameObject);
+    }
+  }
+
+  private void Teleport() {
+    RaycastHit2D hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
     if (hitup.collider != null) {
       hitup.transform.position = teleportPoint.position;
     }

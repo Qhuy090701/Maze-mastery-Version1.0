@@ -7,4 +7,8 @@ public class SelectUi : MonoBehaviour {
     Instantiate(prefab, transform);
     selectMapData.Init();
   }
+  
+  public void DestroyUiCanvas(GameObject prefab){
+    Destroy(prefab);
+  }
 }

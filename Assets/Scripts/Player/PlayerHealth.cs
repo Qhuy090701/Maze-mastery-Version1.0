@@ -23,5 +23,19 @@ public class PlayerHealth : MonoBehaviour {
     //   player.isDead = true;
     //   player.gameObject.SetActive(false);
     // }
+    
+  }
+
+  public void CheckHealth() {
+    if(player.playerData.maxHealth > 1) {
+      player.playerData.maxHealth--;
+      UpdateHealth();
+      Instantiate(player.loseUiWithHealth, RfHolder.Ins.canvas.transform);
+    }
+    else {
+      player.playerData.maxHealth = 5;
+      UpdateHealth();
+      Instantiate(player.loseUiWithoutHealth, RfHolder.Ins.canvas.transform);
+    }
   }
 }

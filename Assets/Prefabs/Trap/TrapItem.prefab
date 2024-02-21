@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5dbe800e48c504aa80e61a141c4c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastHeight: 0.1
-  raycastWidth: 0.1
+  raycastHeight: 0.5
+  raycastWidth: 0.5
   distance: 0.5
   playerLayer:
     serializedVersion: 2

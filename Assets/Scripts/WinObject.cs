@@ -74,15 +74,6 @@ public class WinObject : MonoBehaviour {
   }
 
   public void PlayerLose() {
-    if (RfHolder.Ins.player.playerData.maxHealth > 1) {
-      RfHolder.Ins.player.playerData.maxHealth--;
-      RfHolder.Ins.playerHealth.UpdateHealth();
-      UnityEngine.SceneManagement.SceneManager.LoadScene(Constants.Scene_StartGame);
-    }
-    else {
-      RfHolder.Ins.player.playerData.maxHealth = 5;
-      RfHolder.Ins.playerHealth.UpdateHealth();
-      UnityEngine.SceneManagement.SceneManager.LoadScene(Constants.Scene_StartGame);
-    }
+    RfHolder.Ins.playerHealth.CheckHealth();
   }
 }

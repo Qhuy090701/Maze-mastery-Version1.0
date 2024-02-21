@@ -540,7 +540,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00000023841858, y: -0.000000029802322}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -551,7 +551,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!114 &867883180
 MonoBehaviour:
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d2b4bfdb01630846a4c7c95b482c2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMove: 8
+  speedMove: 6
   jumpForce: 18
   groundLayer:
     serializedVersion: 2
@@ -592,9 +592,11 @@ MonoBehaviour:
   isMoveRight: 0
   velocityX: 0
   raycastHeight: 0.5
-  raycastWidth: 1
+  raycastWidth: 0.5
   distance: 0.5
   playerData: {fileID: 11400000, guid: 5196d310e79e58c4eaca98f252bb5c4e, type: 2}
+  loseUiWithHealth: {fileID: 4032800615238059778, guid: f53b0028117c08b43820acb1013058b1, type: 3}
+  loseUiWithoutHealth: {fileID: 4032800615238059778, guid: d6914acb3fe6dd943aaa7688611aed5b, type: 3}
 --- !u!114 &867883182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1413,7 +1415,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!1 &2028045837
 GameObject:

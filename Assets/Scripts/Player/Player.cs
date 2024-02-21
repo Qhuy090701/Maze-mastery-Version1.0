@@ -28,6 +28,9 @@ public class Player : MonoBehaviour {
   public float distance = 0.1f;
   
   [Header("PlayerData")] public PlayerData playerData;
+  
+  [Header("Ui Lose Game")] public GameObject loseUiWithHealth;
+  public GameObject loseUiWithoutHealth;
   private void OnValidate() {
     if (rb == null) {
       rb = GetComponent<Rigidbody2D>();
