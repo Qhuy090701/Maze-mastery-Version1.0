@@ -31,9 +31,15 @@ public class Player : MonoBehaviour {
   
   [Header("Ui Lose Game")] public GameObject loseUiWithHealth;
   public GameObject loseUiWithoutHealth;
+  
+  [Header("Component")] public Animator anim;
   private void OnValidate() {
     if (rb == null) {
       rb = GetComponent<Rigidbody2D>();
+    }
+    
+    if (anim == null) {
+      anim = GetComponent<Animator>();
     }
   }
 }

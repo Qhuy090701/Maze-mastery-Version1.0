@@ -201,6 +201,7 @@ MonoBehaviour:
   itemTrap: {fileID: 7737066159457786228, guid: 2acb13b0eccbfc44997441d40e2db200, type: 3}
   itemCoin: {fileID: 3259242527170451126, guid: baf19f97693ed854eb055c1fde2dda0d, type: 3}
   pointToSpawn: {fileID: 8389858669921824550}
+  spriteBrickNotHealth: {fileID: 21300000, guid: 912c3ee1738e0164c8f31ae6f3a663c9, type: 3}
 --- !u!61 &8389858670209193418
 BoxCollider2D:
   m_ObjectHideFlags: 0

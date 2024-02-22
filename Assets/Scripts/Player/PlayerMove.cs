@@ -18,13 +18,16 @@ public class PlayerMove : MonoBehaviour {
   }
 
   private void Update() {
-    //Movenment();
+    if (!player.anim.GetCurrentAnimatorStateInfo(0).IsName(Constants.Anim_PlayerJump) && CheckGround()) {
+      player.anim.SetTrigger(Constants.Anim_PlayerIdle);
+    }
     CheckGround();
     MovenmentWithKetCode();
   }
 
   public void Jump() {
     if (CheckGround() && player.countJump > 0) {
+      player.anim.SetTrigger(Constants.Anim_PlayerJump);
       player.rb.velocity = new Vector2(player.rb.velocity.x, player.jumpForce);
       player.countJump--;
     }
@@ -51,8 +54,14 @@ public class PlayerMove : MonoBehaviour {
     if (player.isMove == true) {
       if (Input.GetKey(KeyCode.A)) {
         targetVelocityX = -player.speedMove;
+        player.anim.SetTrigger(Constants.Anim_PlayerWalk);
+        transform.localScale = new Vector3(-2, 2, 1);
       } else if (Input.GetKey(KeyCode.D)) {
+        player.anim.SetTrigger(Constants.Anim_PlayerWalk);
         targetVelocityX = player.speedMove;
+        transform.localScale = new Vector3(2, 2, 1);
+      } else if (CheckGround()) {
+        player.anim.SetTrigger(Constants.Anim_PlayerIdle);
       }
 
       player.rb.velocity = new Vector2(

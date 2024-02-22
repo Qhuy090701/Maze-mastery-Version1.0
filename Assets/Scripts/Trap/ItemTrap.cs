@@ -1,19 +1,22 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Serialization;
 
 public class ItemTrap : Trap {
-  [SerializeField] private ItemTrapState itemTrapState;
   public enum ItemTrapState {
     missile,
-    heart
+    planet,
+    heart,
   }
+
+  [SerializeField] private ItemTrapState itemTrapState;
   [SerializeField] private GameObject missileItem;
-  [SerializeField] private GameObject heartItem;
+  [SerializeField] private GameObject missileGhost;
+  [SerializeField] private GameObject planetItem;
   [SerializeField] private Transform pointToSpawnMissile;
-  [SerializeField] private Transform pointToSpawnHeart;
+  [SerializeField] private Transform pointToSpawnPlanet;
 
   private bool itemSpawned = false;
 
@@ -23,22 +26,41 @@ public class ItemTrap : Trap {
   }
 
   private void RaycastCheck() {
-    RaycastHit2D hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
-    Debug.DrawRay(transform.position, transform.position, Color.red);
+    var hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
     if (hitup.collider != null && !itemSpawned) {
       GameObject spawnedItem;
       switch (itemTrapState) {
         case ItemTrapState.missile:
           spawnedItem = Instantiate(missileItem, pointToSpawnMissile.transform.position, Quaternion.identity);
+          CreateGhostEffect(spawnedItem);
+          spawnedItem.transform.DOMove(hitup.transform.position, 0.75f);
+          break;
+        case ItemTrapState.planet:
+          spawnedItem = Instantiate(planetItem, pointToSpawnPlanet.transform.position, Quaternion.identity);
+          spawnedItem.transform.DOMove(hitup.transform.position, 0.75f);
           break;
         case ItemTrapState.heart:
-          spawnedItem = Instantiate(heartItem, pointToSpawnHeart.transform.position, Quaternion.identity);
+          RfHolder.Ins.player.playerData.maxHealth += 1;
+          RfHolder.Ins.playerHealth.UpdateHealth();
+          Destroy(gameObject);
           break;
         default:
           throw new ArgumentOutOfRangeException();
       }
-      spawnedItem.transform.DOMove(hitup.transform.position, 0.5f);
       itemSpawned = true;
     }
+  }
+
+  private void CreateGhostEffect(GameObject spawnedItem) {
+    var mySequence = DOTween.Sequence();
+    mySequence.AppendInterval(0.1f).OnStepComplete(() => {
+      var ghostMissile = Instantiate(missileGhost, spawnedItem.transform.position, Quaternion.identity);
+      var sr = ghostMissile.GetComponent<SpriteRenderer>();
+      if (sr != null) {
+        sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.5f);
+      }
+      Destroy(ghostMissile, 0.5f);
+    });
+    mySequence.SetLoops(-1);
   }
 }

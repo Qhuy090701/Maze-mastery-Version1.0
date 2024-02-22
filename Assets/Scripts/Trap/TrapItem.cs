@@ -16,6 +16,7 @@ public class TrapItem : Trap {
   [SerializeField] private GameObject itemTrap;
   [SerializeField] private GameObject itemCoin;
   [SerializeField] private Transform pointToSpawn;
+  [SerializeField] private Sprite spriteBrickNotHealth;
 
   private bool itemSpawned = false;
   private bool isCollided = false;
@@ -64,6 +65,7 @@ public class TrapItem : Trap {
           for (int i = 0; i < countspawn; i++) {
             GameObject spawnedItem = Instantiate(itemTrap, transform.position, Quaternion.identity);
             spawnedItem.transform.DOMove(pointToSpawn.position, 0.5f);
+            spriteRenderer.sprite = spriteBrickNotHealth;
           }
 
           itemSpawned = true;

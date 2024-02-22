@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerHealth : MonoBehaviour {
   [SerializeField] private Player player;
@@ -27,7 +28,7 @@ public class PlayerHealth : MonoBehaviour {
   }
 
   public void CheckHealth() {
-    if(player.playerData.maxHealth > 1) {
+    if (player.playerData.maxHealth > 1) {
       player.playerData.maxHealth--;
       UpdateHealth();
       Instantiate(player.loseUiWithHealth, RfHolder.Ins.canvas.transform);
