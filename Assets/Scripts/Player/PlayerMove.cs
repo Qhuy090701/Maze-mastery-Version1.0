@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour {
   }
 
   private void Start() {
+    player.isMove = true;
     player.isMoveLeft = false;
     player.isMoveRight = false;
   }
@@ -21,8 +22,9 @@ public class PlayerMove : MonoBehaviour {
     if (!player.anim.GetCurrentAnimatorStateInfo(0).IsName(Constants.Anim_PlayerJump) && CheckGround()) {
       player.anim.SetTrigger(Constants.Anim_PlayerIdle);
     }
+    Movenment();
     CheckGround();
-    MovenmentWithKetCode();
+    //MovenmentWithKetCode();
   }
 
   public void Jump() {
@@ -54,14 +56,16 @@ public class PlayerMove : MonoBehaviour {
     if (player.isMove == true) {
       if (Input.GetKey(KeyCode.A)) {
         targetVelocityX = -player.speedMove;
-        player.anim.SetTrigger(Constants.Anim_PlayerWalk);
+        player.anim.SetTrigger(CheckGround() ? Constants.Anim_PlayerWalk : Constants.Anim_PlayerJump);
         transform.localScale = new Vector3(-2, 2, 1);
       } else if (Input.GetKey(KeyCode.D)) {
-        player.anim.SetTrigger(Constants.Anim_PlayerWalk);
+        player.anim.SetTrigger(CheckGround() ? Constants.Anim_PlayerWalk : Constants.Anim_PlayerJump);
         targetVelocityX = player.speedMove;
         transform.localScale = new Vector3(2, 2, 1);
       } else if (CheckGround()) {
         player.anim.SetTrigger(Constants.Anim_PlayerIdle);
+      } else {
+        player.anim.SetTrigger(Constants.Anim_PlayerJump);
       }
 
       player.rb.velocity = new Vector2(

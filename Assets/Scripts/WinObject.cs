@@ -6,10 +6,16 @@ using DG.Tweening;
 
 public class WinObject : MonoBehaviour {
   public WinState winState;
+  public StateMove stateMove;
 
   public enum WinState {
     lose,
     win,
+  }
+
+  public enum StateMove {
+    NotMove,
+    Move
   }
 
   [SerializeField] private GameObject winUi;
@@ -19,7 +25,6 @@ public class WinObject : MonoBehaviour {
 
   private void Start() {
     SetCanvas();
-    StartMoveEffect();
   }
 
   private void SetCanvas() {
@@ -30,18 +35,24 @@ public class WinObject : MonoBehaviour {
 
   private void Update() {
     if (winState == WinState.win) {
-      StartMoveEffect();
+      if (Vector2.Distance(transform.position, RfHolder.Ins.player.transform.position) < 1) {
+        ShowWinUI();
+        UnlockNextLevel();
+      }
     }
     else if (winState == WinState.lose) {
       Checkdistance();
+      if (stateMove == StateMove.Move) {
+        StartMoveEffect();
+      }
     }
   }
-  
+
   private void StartMoveEffect() {
     float originalY = transform.position.y;
     DOTween.Sequence()
-      .Append(transform.DOMoveY(originalY + 0.5f, 1f).SetEase(Ease.InOutSine))
-      .Append(transform.DOMoveY(originalY, 1f).SetEase(Ease.InOutSine))
+      .Append(transform.DOMoveY(originalY + 0.5f, 0.5f).SetEase(Ease.InOutSine))
+      .Append(transform.DOMoveY(originalY, 0.5f).SetEase(Ease.InOutSine))
       .SetLoops(-1);
   }
 
@@ -64,12 +75,12 @@ public class WinObject : MonoBehaviour {
 
   public void UnlockNextLevel() {
     selectMapData.MapData[nextLevelUnlock].isUnlocked = true;
+    selectMapData.SaveData();
   }
 
   public void Checkdistance() {
     if (Vector2.Distance(transform.position, RfHolder.Ins.player.transform.position) < 1) {
-      ShowWinUI();
-      UnlockNextLevel();
+      PlayerLose();
     }
   }
 

@@ -16,5 +16,5 @@ MonoBehaviour:
   checkPoint: {x: 0, y: 0, z: 0}
   currentLevel: 1
   prefabs: {fileID: 2087674785498103553, guid: a3081a5dbb4345744bde0b75256475c7, type: 3}
-  isUnlocked: 1
+  isUnlocked: 0
   imgLocked: {fileID: 0}

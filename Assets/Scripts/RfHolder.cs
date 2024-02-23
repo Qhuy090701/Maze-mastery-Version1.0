@@ -9,6 +9,7 @@ public class RfHolder : Singleton<RfHolder> {
  public PlayerHealth playerHealth;
  public Player player;
  public PlayerMove playerMove;
+ public CameraFollow cameraFollow;
 
  private void OnValidate() {
   if (playerPos == null) {
@@ -29,6 +30,10 @@ public class RfHolder : Singleton<RfHolder> {
   
   if (playerMove == null) {
    playerMove = FindObjectOfType<PlayerMove>();
+  }
+  
+  if (cameraFollow == null) {
+   cameraFollow = FindObjectOfType<CameraFollow>();
   }
  }
 }

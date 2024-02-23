@@ -100,8 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ce797e2f6f0824280a88ffc4996f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winState: 1
+  stateMove: 0
   winUi: {fileID: 4960196515225797361, guid: e8803acc465052c43a92b9e8aed0ccc1, type: 3}
   canvas: {fileID: 0}
+  nextLevelUnlock: 0
+  selectMapData: {fileID: 0}
 --- !u!61 &8577849432552770634
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -112,7 +116,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

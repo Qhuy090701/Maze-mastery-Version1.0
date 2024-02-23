@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastHeight: 0.5
-  raycastWidth: 0.5
+  raycastWidth: 0.7
   distance: 0.5
   playerLayer:
     serializedVersion: 2

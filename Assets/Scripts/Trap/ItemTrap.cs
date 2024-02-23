@@ -37,7 +37,7 @@ public class ItemTrap : Trap {
           break;
         case ItemTrapState.planet:
           spawnedItem = Instantiate(planetItem, pointToSpawnPlanet.transform.position, Quaternion.identity);
-          spawnedItem.transform.DOMove(hitup.transform.position, 0.75f);
+          spawnedItem.transform.DOMove(hitup.transform.position, 0.5f);
           break;
         case ItemTrapState.heart:
           RfHolder.Ins.player.playerData.maxHealth += 1;

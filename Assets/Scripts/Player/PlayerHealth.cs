@@ -14,29 +14,44 @@ public class PlayerHealth : MonoBehaviour {
   }
 
   private void Start() {
+    LoadHealth();
     UpdateHealth();
   }
 
   public void UpdateHealth() {
     player.maxHealth = player.playerData.maxHealth;
     player.healthText.text = "Health: " + player.maxHealth;
-    // if (player.maxHealth <= 0) {
-    //   player.isDead = true;
-    //   player.gameObject.SetActive(false);
-    // }
-    
   }
 
   public void CheckHealth() {
+    RfHolder.Ins.cameraFollow.isFollowing = false;
     if (player.playerData.maxHealth > 1) {
       player.playerData.maxHealth--;
-      UpdateHealth();
+      SaveHealth(player.playerData.maxHealth);
+      UpdateHealth(); 
       Instantiate(player.loseUiWithHealth, RfHolder.Ins.canvas.transform);
     }
     else {
-      player.playerData.maxHealth = 5;
+      ResetHealth();
       UpdateHealth();
       Instantiate(player.loseUiWithoutHealth, RfHolder.Ins.canvas.transform);
     }
+  }
+  
+  public void SaveHealth(int health) {
+    player.playerData.maxHealth = health;
+    PlayerPrefs.SetInt(Constants.PrefsKey_PlayerHealth, player.playerData.maxHealth);
+  }
+  
+  public void LoadHealth() {
+    if (PlayerPrefs.HasKey(Constants.PrefsKey_PlayerHealth)) {
+      player.playerData.maxHealth = PlayerPrefs.GetInt(Constants.PrefsKey_PlayerHealth);
+    }
+  }
+  
+  public void ResetHealth() {
+    player.playerData.maxHealth = 5;
+    SaveHealth(player.playerData.maxHealth);
+    UpdateHealth();
   }
 }
