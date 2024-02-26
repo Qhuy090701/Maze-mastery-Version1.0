@@ -46,7 +46,6 @@ public class TrapItem : Trap {
     RaycastHit2D hitdown = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.down, distance, playerLayer);
     RaycastHit2D hitleft = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.left, distance, playerLayer);
     RaycastHit2D hitright = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.right, distance, playerLayer);
-    Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
     if (hitdown.collider != null || hitup.collider != null || hitleft.collider != null || hitright.collider != null) {
       if (trapItemState == TrapItemState.Hide && !isCollided) {
         isCollided = true;
@@ -58,6 +57,7 @@ public class TrapItem : Trap {
         countHealth--;
         playerCollided = true;
         if (countHealth > 0) {
+          DOTween.Sequence().Append(gameObject.transform.DOScaleY(0.9f, 0.15f)).Append(gameObject.transform.DOScaleY(1f, 0.15f));
           GameObject spawnedItem = Instantiate(itemCoin, transform.position, Quaternion.identity);
           spawnedItem.transform.DOMove(pointToSpawn.position, 1f);
         }

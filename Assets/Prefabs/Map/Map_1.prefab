@@ -14059,7 +14059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2671317837835048473, guid: 1604d78b735e58b41bcb114c8a173d7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.1
+      value: -11.62
       objectReference: {fileID: 0}
     - target: {fileID: 2671317837835048473, guid: 1604d78b735e58b41bcb114c8a173d7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15007,7 +15007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8577849432552770631, guid: 12f30d3713d3ac2449423831b3db9ccd, type: 3}
       propertyPath: stateMove
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8577849432552770631, guid: 12f30d3713d3ac2449423831b3db9ccd, type: 3}
       propertyPath: selectMapData

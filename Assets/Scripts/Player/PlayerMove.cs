@@ -22,9 +22,9 @@ public class PlayerMove : MonoBehaviour {
     if (!player.anim.GetCurrentAnimatorStateInfo(0).IsName(Constants.Anim_PlayerJump) && CheckGround()) {
       player.anim.SetTrigger(Constants.Anim_PlayerIdle);
     }
-    Movenment();
+    //Movenment();
     CheckGround();
-    //MovenmentWithKetCode();
+    MovenmentWithKetCode();
   }
 
   public void Jump() {

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -28,27 +25,25 @@ public class PlayerHealth : MonoBehaviour {
     if (player.playerData.maxHealth > 1) {
       player.playerData.maxHealth--;
       SaveHealth(player.playerData.maxHealth);
-      UpdateHealth(); 
-      Instantiate(player.loseUiWithHealth, RfHolder.Ins.canvas.transform);
     }
     else {
       ResetHealth();
-      UpdateHealth();
-      Instantiate(player.loseUiWithoutHealth, RfHolder.Ins.canvas.transform);
     }
+    UpdateHealth();
+    DOVirtual.DelayedCall(1, () => { Instantiate(player.loseUi, RfHolder.Ins.canvas.transform); });
   }
-  
+
   public void SaveHealth(int health) {
     player.playerData.maxHealth = health;
     PlayerPrefs.SetInt(Constants.PrefsKey_PlayerHealth, player.playerData.maxHealth);
   }
-  
+
   public void LoadHealth() {
     if (PlayerPrefs.HasKey(Constants.PrefsKey_PlayerHealth)) {
       player.playerData.maxHealth = PlayerPrefs.GetInt(Constants.PrefsKey_PlayerHealth);
     }
   }
-  
+
   public void ResetHealth() {
     player.playerData.maxHealth = 5;
     SaveHealth(player.playerData.maxHealth);

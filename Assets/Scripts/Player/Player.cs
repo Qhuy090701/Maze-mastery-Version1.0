@@ -29,10 +29,10 @@ public class Player : MonoBehaviour {
   
   [Header("PlayerData")] public PlayerData playerData;
   
-  [Header("Ui Lose Game")] public GameObject loseUiWithHealth;
-  public GameObject loseUiWithoutHealth;
+  [Header("Ui Lose Game")] public GameObject loseUi;
   
   [Header("Component")] public Animator anim;
+  
   private void OnValidate() {
     if (rb == null) {
       rb = GetComponent<Rigidbody2D>();
