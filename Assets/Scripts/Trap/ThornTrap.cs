@@ -13,8 +13,10 @@ public class ThornTrap : Trap {
   private void OnTriggerEnter2D(Collider2D other) {
     if (other.gameObject.CompareTag(Constants.Tag_Player)) {
       if(thornType == Thorntype.jump) {
+        RfHolder.Ins.player.countJump ++;
         RfHolder.Ins.playerMove.Jump();
       } else if(thornType == Thorntype.die) {
+        other.gameObject.SetActive(false);
         RfHolder.Ins.playerHealth.CheckHealth();
       }
     }
