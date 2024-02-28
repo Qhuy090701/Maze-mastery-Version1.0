@@ -1,9 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
 public class BrickPoint : Trap {
+  [SerializeField] private Animator animator;
+  
+  private void Awake() {
+    if (animator == null) animator = GetComponent<Animator>();
+    animator.SetTrigger(Constants.Anim_BrickIdle);
+  }
+
   private void Update() {
     base.Update();
     RaycastCheck();
@@ -12,7 +20,8 @@ public class BrickPoint : Trap {
   protected override void RaycastCheck() {
     RaycastHit2D hitdown = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.down, distance, playerLayer);
     if (hitdown.collider != null) {
-      DOTween.Sequence().AppendInterval(0.25f).OnComplete(() => {
+      animator.SetTrigger(Constants.Anim_BrickBroken);
+      DOTween.Sequence().AppendInterval(0.5f).OnComplete(() => {
         Destroy(gameObject);
       });
     }

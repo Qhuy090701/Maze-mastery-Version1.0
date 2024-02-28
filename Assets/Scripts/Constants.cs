@@ -10,6 +10,9 @@ public class Constants : MonoBehaviour {
   public const string Anim_PlayerJump = "Jump";
   public const string Anim_PlayerIdle = "Idle";
   public const string Anim_PlayerWalk = "Walk";
+
+  public const string Anim_BrickIdle = "IdleBrick";
+  public const string Anim_BrickBroken = "BrokenBrick";
   
   [Header("Prefs")]
   public const string PrefsKey_PlayerHealth = "PlayerHealth";
