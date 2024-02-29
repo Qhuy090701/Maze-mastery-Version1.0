@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
+  public MoveState moveState;
+  public enum  MoveState {
+    movewithbutton,
+    moveWithKey
+  }
   [SerializeField] private Player player;
 
   private void OnValidate() {
@@ -24,7 +29,16 @@ public class PlayerMove : MonoBehaviour {
     }
     //Movenment();
     CheckGround();
-    MovenmentWithKetCode();
+    //MovenmentWithKetCode();
+    
+    switch (moveState) {
+      case MoveState.movewithbutton:
+        Movenment();
+        break;
+      case MoveState.moveWithKey:
+        MovenmentWithKetCode();
+        break;
+    }
   }
 
   public void Jump() {
@@ -44,13 +58,29 @@ public class PlayerMove : MonoBehaviour {
   public void Movenment() {
     if (player.isMoveLeft) {
       player.rb.velocity = new Vector2(-player.speedMove, player.rb.velocity.y);
+      if (CheckGround()) {
+        player.anim.SetTrigger(Constants.Anim_PlayerWalk);
+      } else {
+        player.anim.SetTrigger(Constants.Anim_PlayerJump);
+      }
+      transform.localScale = new Vector3(-2, 2, 1);
     } else if (player.isMoveRight) {
       player.rb.velocity = new Vector2(player.speedMove, player.rb.velocity.y);
+      if (CheckGround()) {
+        player.anim.SetTrigger(Constants.Anim_PlayerWalk);
+      } else {
+        player.anim.SetTrigger(Constants.Anim_PlayerJump);
+      }
+      transform.localScale = new Vector3(2, 2, 1);
     } else {
       player.rb.velocity = new Vector2(0, player.rb.velocity.y);
+      if (CheckGround()) {
+        player.anim.SetTrigger(Constants.Anim_PlayerIdle);
+      } else {
+        player.anim.SetTrigger(Constants.Anim_PlayerJump);
+      }
     }
   }
-  
   public void MovenmentWithKetCode() {
     float targetVelocityX = 0;
     if (player.isMove == true) {
