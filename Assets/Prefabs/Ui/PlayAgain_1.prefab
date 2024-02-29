@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550e6f4778ceafc42bec325bd13b6aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 4
   timeToDelay: 0
 --- !u!1 &568900930901155371
 GameObject:
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550e6f4778ceafc42bec325bd13b6aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 4
   timeToDelay: 0
 --- !u!1 &4032800613643292345
 GameObject:
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550e6f4778ceafc42bec325bd13b6aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 4
   timeToDelay: 0
 --- !u!1 &8112542352271270364
 GameObject:

@@ -8,9 +8,10 @@ public class TWeenCustom : MonoBehaviour {
 
   public enum TweenType {
     Scale,
+    ScaleLoop,
     Move,
     Rotate,
-    Flicker
+    Flicker,
   }
 
   [SerializeField] private float timeToDelay;
@@ -23,9 +24,13 @@ public class TWeenCustom : MonoBehaviour {
       case TweenType.Move:
         break;
       case TweenType.Rotate:
+        RotateEffect();
         break;
       case TweenType.Flicker:
         FlickEffect();
+        break;
+      case TweenType.ScaleLoop:
+        ScaleEffect();
         break;
     }
   }
@@ -41,6 +46,19 @@ public class TWeenCustom : MonoBehaviour {
     DOTween.Sequence()
       .Append(transform.DOScale(Vector3.one * 1.2f, 0.25f))
       .Append(transform.DOScale(Vector3.one, 0.25f))
+      .SetLoops(-1);
+  }
+
+  private void RotateEffect() {
+    DOTween.Sequence()
+      .Append(transform.DORotate(new Vector3(0, 0, 360), 2f, RotateMode.FastBeyond360))
+      .SetLoops(-1);
+  }
+
+  public void ScaleEffect() {
+    DOTween.Sequence()
+      .Append(transform.DOScale(Vector3.one * 1.5f, 1f))
+      .Append(transform.DOScale(Vector3.one, 2f))
       .SetLoops(-1);
   }
 }

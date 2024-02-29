@@ -16,4 +16,11 @@ public class Constants : MonoBehaviour {
   
   [Header("Prefs")]
   public const string PrefsKey_PlayerHealth = "PlayerHealth";
+  public const string PrefsKey_MusicVolume = "MusicVolume";
+  public const string PrefsKey_SfxVolume = "SfxVolume";
+  
+  [Header("Scene")]
+  public const string Scene_MainMenu = "MainMenu";
+
+
 }

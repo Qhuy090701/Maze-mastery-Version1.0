@@ -26,24 +26,34 @@ public class TrapElevator : Trap {
   private bool movingToA = true;
 
   private void Update() {
-    switch (elevatorState) {
-      case ElevatorState.NoneTrap:
-      case ElevatorState.Trap:
-      case ElevatorState.TrapTeleport:
-        switch (movementType) {
-          case MovementType.DontMove:
-            break;
-          case MovementType.MoveAToB:
-            MoveAToB();
-            break;
-          case MovementType.MoveTriangle:
-            MoveTriangle();
-            break;
-        }
+    HandleMovement();
+    HandleElevatorState();
+  }
+
+  private void HandleMovement() {
+    switch (movementType) {
+      case MovementType.DontMove:
+        break;
+      case MovementType.MoveAToB:
+        MoveAToB();
+        break;
+      case MovementType.MoveTriangle:
+        MoveTriangle();
         break;
     }
+  }
 
-    base.Update();
+  private void HandleElevatorState() {
+    switch (elevatorState) {
+      case ElevatorState.NoneTrap:
+        break;
+      case ElevatorState.Trap:
+        TrapMoveOn();
+        break;
+      case ElevatorState.TrapTeleport:
+        Teleport();
+        break;
+    }
   }
 
   private void MoveAToB() {
@@ -100,7 +110,8 @@ public class TrapElevator : Trap {
     raycastHeight = 0.5f;
     RaycastHit2D hitup = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.up, distance, playerLayer);
     if (hitup.collider != null) {
-      Destroy(hitup.collider.gameObject);
+      hitup.collider.gameObject.SetActive(false);
+      RfHolder.Ins.playerHealth.CheckHealth();
     }
   }
 
