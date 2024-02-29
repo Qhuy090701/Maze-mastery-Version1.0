@@ -59,9 +59,11 @@ public class WinObject : MonoBehaviour {
   private void OnTriggerEnter2D(Collider2D other) {
     if (other.CompareTag(Constants.Tag_Player)) {
       if (winState == WinState.lose) {
+        other.gameObject.SetActive(false);
         PlayerLose();
       }
       else if (winState == WinState.win) {
+        other.gameObject.SetActive(false);
         ShowWinUI();
         UnlockNextLevel();
       }

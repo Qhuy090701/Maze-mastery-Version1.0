@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: SelectMapData
   m_EditorClassIdentifier: 
   currentMapIndex: 0
-  MapData: []
+  MapData:
+  - {fileID: 11400000, guid: 2b79956c1793af046ad16958b6a9d1ba, type: 2}
+  - {fileID: 11400000, guid: 1dfc5d917b83f8947aacc350cddeaf12, type: 2}
+  - {fileID: 11400000, guid: 706e39823b04c2548a64b2f1a9f1dbcf, type: 2}

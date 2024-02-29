@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class WinUi : MonoBehaviour {
-  public void PlayAgain() {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+  
+  public void NextLevel(int level) {
+    SceneManager.LoadScene(level);
   }
 }
