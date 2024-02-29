@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class SelectUi : MonoBehaviour {
   [SerializeField] private SelectMapData selectMapData;
@@ -9,6 +10,6 @@ public class SelectUi : MonoBehaviour {
   }
   
   public void DestroyUiCanvas(GameObject prefab){
-    Destroy(prefab);
+    DOVirtual.DelayedCall(1f, () => Destroy(prefab));
   }
 }

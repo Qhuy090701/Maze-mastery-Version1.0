@@ -6,18 +6,23 @@ using UnityEngine.UI;
 public class UiSettingMusic : MonoBehaviour {
   public Slider musicSlider;
   public Slider sfxSlider;
-
+  public GameObject buttonDoneYellow;
+  
   private void Start() {
     LoadVolumeSettings();
   }
 
   public void MusicVolume() {
     AudioManager.Ins.MusicVolume(musicSlider.value);
-    SaveVolumeSettings(Constants.PrefsKey_MusicVolume, musicSlider.value);
   }
 
   public void SFXVolume() {
     AudioManager.Ins.SfxVolume(sfxSlider.value);
+  }
+  
+  public void SaveSettings() {
+    buttonDoneYellow.SetActive(true);
+    SaveVolumeSettings(Constants.PrefsKey_MusicVolume, musicSlider.value);
     SaveVolumeSettings(Constants.PrefsKey_SfxVolume, sfxSlider.value);
   }
 
