@@ -10,6 +10,6 @@ public class SelectUi : MonoBehaviour {
   }
   
   public void DestroyUiCanvas(GameObject prefab){
-    DOVirtual.DelayedCall(1f, () => Destroy(prefab));
+    DOVirtual.DelayedCall(0.25f, () => Destroy(prefab));
   }
 }
