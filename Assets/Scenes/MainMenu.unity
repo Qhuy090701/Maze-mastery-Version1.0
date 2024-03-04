@@ -211,7 +211,7 @@ MonoBehaviour:
         m_MethodName: SelectUiCanvas
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3260258785516263236, guid: abeb153414888a94794d2b160b2732a3, type: 3}
+          m_ObjectArgument: {fileID: 3260258785516263236, guid: 5ceb9b4d1f707b2459426008537efbea, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

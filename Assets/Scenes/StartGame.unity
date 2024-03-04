@@ -652,6 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f96d6ec61b9c6c46b34ce645b43ec7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveState: 0
   player: {fileID: 867883181}
 --- !u!114 &867883181
 MonoBehaviour:

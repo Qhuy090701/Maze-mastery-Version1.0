@@ -9,6 +9,6 @@ public class CreateMap : MonoBehaviour {
   }
   
   private void Start() {
-    textLevelmap.text = "Level " + selectMapData.MapData[selectMapData.currentMapIndex + 1].currentLevel;
+    textLevelmap.text = "Level " + (selectMapData.MapData[selectMapData.currentMapIndex].currentLevel + 1);
   }
 }

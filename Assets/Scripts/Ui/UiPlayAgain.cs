@@ -21,7 +21,7 @@ public class UiPlayAgain : MonoBehaviour {
     DOVirtual.DelayedCall(1.5F, LoadNewScene);
   }
   
-  private void LoadNewScene() {
+  public void LoadNewScene() {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
   }
 }

@@ -628,7 +628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5998241547178906284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.34, y: 2.01, z: 0}
+  m_LocalPosition: {x: 100.13, y: 2.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1736,6 +1736,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 610779751010291614}
     m_Modifications:
+    - target: {fileID: 3686726945427499101, guid: 4123bc5a6030b08428d930a6219e8d82, type: 3}
+      propertyPath: winState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686726945427499101, guid: 4123bc5a6030b08428d930a6219e8d82, type: 3}
+      propertyPath: comingSoonUi
+      value: 
+      objectReference: {fileID: 8261309379508697715, guid: bf77b49f60da3ca49a283ccdb34a06f0, type: 3}
     - target: {fileID: 3956313496419812485, guid: 4123bc5a6030b08428d930a6219e8d82, type: 3}
       propertyPath: m_Name
       value: Board Play Game (2)
