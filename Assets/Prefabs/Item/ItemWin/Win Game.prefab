@@ -101,11 +101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winState: 1
-  stateMove: 0
   winUi: {fileID: 4960196515225797361, guid: e8803acc465052c43a92b9e8aed0ccc1, type: 3}
   canvas: {fileID: 0}
   nextLevelUnlock: 0
   selectMapData: {fileID: 0}
+  comingSoonUi: {fileID: 8261309379508697715, guid: bf77b49f60da3ca49a283ccdb34a06f0, type: 3}
 --- !u!61 &8577849432552770634
 BoxCollider2D:
   m_ObjectHideFlags: 0
