@@ -663,7 +663,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 861447547}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1219739566}
+        m_TargetAssemblyTypeName: SelectUi, Assembly-CSharp
+        m_MethodName: SelectUiCanvas
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8989165645295924570, guid: de193fbefaea820478e03510aabf4797, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &861447547
 MonoBehaviour:
   m_ObjectHideFlags: 0
