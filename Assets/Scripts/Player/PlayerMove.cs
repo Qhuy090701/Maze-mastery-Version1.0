@@ -43,6 +43,7 @@ public class PlayerMove : MonoBehaviour {
 
   public void Jump() {
     if (CheckGround() && player.countJump > 0) {
+      AudioManager.Ins.PlaySfx(SoundName.SfxJump);
       player.anim.SetTrigger(Constants.Anim_PlayerJump);
       player.rb.velocity = new Vector2(player.rb.velocity.x, player.jumpForce);
       player.countJump--;

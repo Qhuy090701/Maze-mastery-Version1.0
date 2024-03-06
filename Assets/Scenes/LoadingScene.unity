@@ -895,7 +895,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSounds: []
-  sfxSounds: []
+  sfxSounds:
+  - name: 2
+    clip: {fileID: 8300000, guid: 417c97f4ce90e5748b69872d2097cf38, type: 3}
+  - name: 5
+    clip: {fileID: 8300000, guid: 5d247cd17d684594483b8e1cd72996b9, type: 3}
+  - name: 4
+    clip: {fileID: 8300000, guid: 283b4aefbe360534bbe028a72847f61a, type: 3}
+  - name: 6
+    clip: {fileID: 8300000, guid: 0c966b276752c1d4faecf107d43294cf, type: 3}
   musicSource: {fileID: 766830022}
   sfxSource: {fileID: 823370686}
 --- !u!1 &1541835278
@@ -1051,6 +1059,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

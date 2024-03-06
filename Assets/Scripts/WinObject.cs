@@ -37,6 +37,7 @@ public class WinObject : MonoBehaviour {
         PlayerLose();
       }
       else if (winState == WinState.win) {
+        AudioManager.Ins.PlaySfx(SoundName.SfxWinGame);
         other.gameObject.SetActive(false);
         ShowWinUI();
         UnlockNextLevel();

@@ -21,6 +21,7 @@ public class BrickPoint : Trap {
     RaycastHit2D hitdown = Physics2D.BoxCast(transform.position, new Vector2(raycastWidth, raycastHeight), 0f, Vector2.down, distance, playerLayer);
     if (hitdown.collider != null) {
       animator.SetTrigger(Constants.Anim_BrickBroken);
+      AudioManager.Ins.PlaySfx(SoundName.SfxBrokenBrick);
       DOTween.Sequence().AppendInterval(0.5f).OnComplete(() => {
         Destroy(gameObject);
       });
