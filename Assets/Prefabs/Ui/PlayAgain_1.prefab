@@ -611,6 +611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c26610144cf1654ba9451d6a3f501e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 5196d310e79e58c4eaca98f252bb5c4e, type: 2}
+  inAppUi: {fileID: 8989165645295924570, guid: de193fbefaea820478e03510aabf4797, type: 3}
 --- !u!1 &5923506757195500680
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,11 +904,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6261818903696732958}
         m_TargetAssemblyTypeName: UiPlayAgain, Assembly-CSharp
-        m_MethodName: PlayAgain
-        m_Mode: 2
+        m_MethodName: InApp
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 400981344612378217}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

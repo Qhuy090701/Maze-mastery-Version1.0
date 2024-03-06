@@ -7,9 +7,16 @@ using UnityEngine.UI;
 using DG.Tweening;
 
 public class UiPlayAgain : MonoBehaviour {
-  public void PlayAgain(GameObject btn_playAgain) {
-    btn_playAgain.SetActive(true);
-    DOVirtual.DelayedCall(1.5f, LoadStartGameScene);
+  [SerializeField] private PlayerData playerData;
+  [SerializeField] private GameObject inAppUi;
+  public void PlayAgain(GameObject btnPlayAgain) {
+    if (playerData.maxHealth > 0) {
+      btnPlayAgain.SetActive(true);
+      DOVirtual.DelayedCall(1.5f, LoadStartGameScene);
+    }
+    else {
+       Debug.Log("Health = 0");
+    }
   }
 
   private void LoadStartGameScene() {
@@ -23,5 +30,9 @@ public class UiPlayAgain : MonoBehaviour {
   
   public void LoadNewScene() {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+  }
+
+  public void InApp() {
+    GameObject inappUi = Instantiate(inAppUi, RfHolder.Ins.canvas.transform);
   }
 }
