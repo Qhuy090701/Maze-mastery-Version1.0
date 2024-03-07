@@ -894,7 +894,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835923b8892217648b3fc18545a19ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSounds: []
+  musicSounds:
+  - name: 0
+    clip: {fileID: 8300000, guid: 07f0a0b3eac923444a26e45ce035c7bb, type: 3}
   sfxSounds:
   - name: 2
     clip: {fileID: 8300000, guid: 417c97f4ce90e5748b69872d2097cf38, type: 3}
