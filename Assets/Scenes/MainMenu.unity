@@ -791,6 +791,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -912,7 +913,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1658880949}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1219739566}
+        m_TargetAssemblyTypeName: SelectUi, Assembly-CSharp
+        m_MethodName: SelectUiCanvas
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1875313425942566135, guid: 2b7e9345c3bf5e74eafcb563208bfe68, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1658880949
 MonoBehaviour:
   m_ObjectHideFlags: 0
