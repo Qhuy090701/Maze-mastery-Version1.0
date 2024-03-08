@@ -495,6 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectMapData: {fileID: 11400000, guid: fc39264d8f1396247a92463c9a00abc4, type: 2}
+  playerData: {fileID: 11400000, guid: 5196d310e79e58c4eaca98f252bb5c4e, type: 2}
 --- !u!114 &758678504754845310
 MonoBehaviour:
   m_ObjectHideFlags: 0

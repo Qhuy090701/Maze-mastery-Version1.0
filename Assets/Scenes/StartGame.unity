@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f96d6ec61b9c6c46b34ce645b43ec7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveState: 0
+  moveState: 1
   player: {fileID: 867883181}
 --- !u!114 &867883181
 MonoBehaviour:
@@ -653,6 +653,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &867883184
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1745,6 +1746,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
