@@ -14,6 +14,7 @@ public class SelectMapUi : MonoBehaviour {
       if (playerData.maxHealth > 0) {
         selectMapData.currentMapIndex = mapIndex;
         SceneManager.LoadScene(Constants.Scene_StartGame);
+       AudioManager.Ins.TurnOffMusic(SoundName.BackGroundMusic);
       }
       else {
         Debug.Log("Health = 0");
