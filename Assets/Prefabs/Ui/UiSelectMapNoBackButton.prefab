@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 918674039975492605}
   - component: {fileID: 3654726485677391006}
   - component: {fileID: 758678504754845310}
+  - component: {fileID: 7408998584108094505}
   m_Layer: 5
   m_Name: UiSelectMapNoBackButton
   m_TagString: Untagged
@@ -509,6 +510,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectMapData: {fileID: 11400000, guid: fc39264d8f1396247a92463c9a00abc4, type: 2}
+--- !u!114 &7408998584108094505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260258785516263236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a1a8a40413b5b4f944af93a0ef9190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5336289342254124116
 GameObject:
   m_ObjectHideFlags: 0

@@ -37,6 +37,11 @@ public class AudioManager : Singleton<AudioManager> {
     }
   }
   
+  public void TurnOffMusic(SoundName soundName) {
+      musicSource.Stop();
+  }
+    
+  
   public void PlaySfx(SoundName soundName) {
     Sound s = Array.Find(sfxSounds, x => x.name == soundName);
 
