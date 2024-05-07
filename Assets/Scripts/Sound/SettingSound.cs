@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UiSettingMusic : MonoBehaviour {
+public class SettingSound : MonoBehaviour {
   public Slider musicSlider;
   public Slider sfxSlider;
   public GameObject buttonDoneYellow;

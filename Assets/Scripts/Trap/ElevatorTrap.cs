@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrapElevator : Trap {
+public class ElevatorTrap : Trap {
   public ElevatorState elevatorState;
   public MovementType movementType;
 

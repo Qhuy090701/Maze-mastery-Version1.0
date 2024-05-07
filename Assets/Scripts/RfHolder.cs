@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class RfHolder : Singleton<RfHolder> {
  public Transform playerPos;
@@ -9,7 +10,7 @@ public class RfHolder : Singleton<RfHolder> {
  public PlayerHealth playerHealth;
  public Player player;
  public PlayerMove playerMove;
- public CameraFollow cameraFollow;
+ [FormerlySerializedAs("cameraFollow")] public CamereTarget camereTarget;
 
  private void OnValidate() {
   if (playerPos == null) {
@@ -32,8 +33,8 @@ public class RfHolder : Singleton<RfHolder> {
    playerMove = FindObjectOfType<PlayerMove>();
   }
   
-  if (cameraFollow == null) {
-   cameraFollow = FindObjectOfType<CameraFollow>();
+  if (camereTarget == null) {
+   camereTarget = FindObjectOfType<CamereTarget>();
   }
  }
 }

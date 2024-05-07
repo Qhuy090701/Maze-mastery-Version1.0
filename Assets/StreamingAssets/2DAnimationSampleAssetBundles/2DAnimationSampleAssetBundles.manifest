@@ -1,11 +1,10 @@
 ManifestFileVersion: 0
-UnityVersion: 2023.2.15f1
-CRC: 922342197
+CRC: 2251530599
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: rikrpoison
+      Name: rikrrage
       Dependencies: {}
     Info_1:
-      Name: rikrrage
+      Name: rikrpoison
       Dependencies: {}

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TrapWallLandR : Trap {
+public class WallLandTrap : Trap {
   [SerializeField] private GameObject gameobjectA;
   [SerializeField] private GameObject gameobjectB;
   [SerializeField] private Transform maxPositionA;
