@@ -21,11 +21,13 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
-    ignoreMasterTextureLimit: 0
+    ignoreMipmapLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -88,7 +90,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
@@ -112,9 +113,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 559, y: -516}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 907, y: 77}
+    spritePosition: {x: 348, y: 593}
   - name: arm L
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -134,9 +134,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 262, y: 300}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 591, y: 620}
+    spritePosition: {x: 329, y: 320}
   - name: hand L bottom
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -156,9 +155,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 557, y: -325}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 907, y: 4}
+    spritePosition: {x: 350, y: 329}
   - name: hair front
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -178,9 +176,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -259, y: -573}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 263, y: 577}
   - name: mouth open
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -200,9 +197,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -336, y: 328}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 150, y: 1006}
+    spritePosition: {x: 486, y: 678}
   - name: mouth teeth
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -222,9 +218,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 469, y: -530}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 955, y: 151}
+    spritePosition: {x: 486, y: 681}
   - name: mouth normal
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -244,9 +239,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 469, y: -551}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 955, y: 130}
+    spritePosition: {x: 486, y: 681}
   - name: eye R closed
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -266,9 +260,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 475, y: -706}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 995, y: 4}
+    spritePosition: {x: 520, y: 710}
   - name: eye R open
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -288,9 +281,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 387, y: -537}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 907, y: 175}
+    spritePosition: {x: 520, y: 712}
   - name: eye L closed
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -310,9 +302,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 443, y: -579}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 907, y: 130}
+    spritePosition: {x: 464, y: 709}
   - name: eye L open
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -332,9 +323,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -316, y: 159}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 146, y: 872}
+    spritePosition: {x: 462, y: 713}
   - name: head
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -354,9 +344,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -406, y: 116}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 4, y: 774}
+    spritePosition: {x: 410, y: 658}
   - name: neck element
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -376,9 +365,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -380, y: 351}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 4, y: 951}
+    spritePosition: {x: 384, y: 600}
   - name: coat front
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -398,9 +386,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 230, y: -18}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 591, y: 256}
+    spritePosition: {x: 361, y: 274}
   - name: neck
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -420,9 +407,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -299, y: 161}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 146, y: 774}
+    spritePosition: {x: 445, y: 613}
   - name: torso
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -442,9 +428,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -164, y: 122}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 228, y: 399}
+    spritePosition: {x: 392, y: 277}
   - name: leg L
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -464,9 +449,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 53, y: 170}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 455, y: 256}
+    spritePosition: {x: 402, y: 86}
   - name: leg R
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -486,9 +470,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -31, y: 555}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 455, y: 641}
+    spritePosition: {x: 486, y: 86}
   - name: coat back
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -508,9 +491,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -362, y: 115}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 4, y: 399}
+    spritePosition: {x: 366, y: 284}
   - name: shoulder plate R
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -530,9 +512,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -357, y: 357}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 150, y: 951}
+    spritePosition: {x: 507, y: 594}
   - name: hand R top
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -552,9 +533,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 64, y: 618}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 591, y: 945}
+    spritePosition: {x: 527, y: 327}
   - name: arm R
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -574,9 +554,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 207, y: -80}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 710, y: 256}
+    spritePosition: {x: 503, y: 336}
   - name: hair back
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -596,14 +575,14 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 191, y: -583}
-    spritePosition: {x: 0, y: 0}
+    uvTransform: {x: 455, y: 4}
+    spritePosition: {x: 264, y: 587}
   characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   sharedRigSpriteImportData:
   - name: shoulder plate L
@@ -808,7 +787,6 @@ ScriptedImporter:
     - {x: 12, y: 13}
     - {x: 8, y: 9}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 907, y: 77}
     spritePosition: {x: 348, y: 593}
   - name: arm L
@@ -1252,7 +1230,6 @@ ScriptedImporter:
     - {x: 8, y: 34}
     - {x: 9, y: 34}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 591, y: 620}
     spritePosition: {x: 329, y: 320}
   - name: hand L bottom
@@ -1404,7 +1381,6 @@ ScriptedImporter:
     - {x: 2, y: 10}
     - {x: 3, y: 10}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 907, y: 4}
     spritePosition: {x: 350, y: 329}
   - name: hair front
@@ -1985,7 +1961,6 @@ ScriptedImporter:
     - {x: 7, y: 49}
     - {x: 48, y: 49}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 263, y: 577}
   - name: mouth open
@@ -2126,7 +2101,6 @@ ScriptedImporter:
     - {x: 5, y: 6}
     - {x: 2, y: 3}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 150, y: 1006}
     spritePosition: {x: 486, y: 678}
   - name: mouth teeth
@@ -2256,7 +2230,6 @@ ScriptedImporter:
     - {x: 8, y: 0}
     - {x: 4, y: 3}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 955, y: 151}
     spritePosition: {x: 486, y: 681}
   - name: mouth normal
@@ -2397,7 +2370,6 @@ ScriptedImporter:
     - {x: 1, y: 2}
     - {x: 3, y: 4}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 955, y: 130}
     spritePosition: {x: 486, y: 681}
   - name: eye R closed
@@ -2571,7 +2543,6 @@ ScriptedImporter:
     - {x: 8, y: 9}
     - {x: 7, y: 8}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 995, y: 4}
     spritePosition: {x: 520, y: 710}
   - name: eye R open
@@ -2811,7 +2782,6 @@ ScriptedImporter:
     - {x: 1, y: 2}
     - {x: 3, y: 4}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 907, y: 175}
     spritePosition: {x: 520, y: 712}
   - name: eye L closed
@@ -3051,7 +3021,6 @@ ScriptedImporter:
     - {x: 8, y: 9}
     - {x: 7, y: 8}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 907, y: 130}
     spritePosition: {x: 464, y: 709}
   - name: eye L open
@@ -3302,7 +3271,6 @@ ScriptedImporter:
     - {x: 18, y: 19}
     - {x: 0, y: 19}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 146, y: 872}
     spritePosition: {x: 462, y: 713}
   - name: head
@@ -3564,7 +3532,6 @@ ScriptedImporter:
     - {x: 10, y: 11}
     - {x: 8, y: 9}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 4, y: 774}
     spritePosition: {x: 410, y: 658}
   - name: neck element
@@ -3723,7 +3690,6 @@ ScriptedImporter:
     - {x: 0, y: 1}
     - {x: 1, y: 2}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 4, y: 951}
     spritePosition: {x: 384, y: 600}
   - name: coat front
@@ -4047,7 +4013,6 @@ ScriptedImporter:
     - {x: 22, y: 23}
     - {x: 0, y: 24}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 591, y: 256}
     spritePosition: {x: 361, y: 274}
   - name: neck
@@ -4272,7 +4237,6 @@ ScriptedImporter:
     - {x: 7, y: 8}
     - {x: 6, y: 7}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 146, y: 774}
     spritePosition: {x: 445, y: 613}
   - name: torso
@@ -4890,7 +4854,6 @@ ScriptedImporter:
     - {x: 19, y: 47}
     - {x: 47, y: 35}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 228, y: 399}
     spritePosition: {x: 392, y: 277}
   - name: leg L
@@ -5311,7 +5274,6 @@ ScriptedImporter:
     - {x: 5, y: 32}
     - {x: 13, y: 14}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 455, y: 256}
     spritePosition: {x: 402, y: 86}
   - name: leg R
@@ -5732,7 +5694,6 @@ ScriptedImporter:
     - {x: 22, y: 32}
     - {x: 23, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 455, y: 641}
     spritePosition: {x: 486, y: 86}
   - name: coat back
@@ -6137,7 +6098,6 @@ ScriptedImporter:
     - {x: 0, y: 1}
     - {x: 7, y: 8}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 4, y: 399}
     spritePosition: {x: 366, y: 284}
   - name: shoulder plate R
@@ -6322,7 +6282,6 @@ ScriptedImporter:
     - {x: 9, y: 10}
     - {x: 10, y: 11}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 150, y: 951}
     spritePosition: {x: 507, y: 594}
   - name: hand R top
@@ -6595,7 +6554,6 @@ ScriptedImporter:
     - {x: 20, y: 21}
     - {x: 8, y: 21}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 591, y: 945}
     spritePosition: {x: 527, y: 327}
   - name: arm R
@@ -7067,7 +7025,6 @@ ScriptedImporter:
     - {x: 14, y: 37}
     - {x: 15, y: 37}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 710, y: 256}
     spritePosition: {x: 503, y: 336}
   - name: hair back
@@ -7439,7 +7396,6 @@ ScriptedImporter:
     - {x: 13, y: 30}
     - {x: 14, y: 30}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 455, y: 4}
     spritePosition: {x: 264, y: 587}
   sharedRigCharacterData:
@@ -7879,10 +7835,12 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0.5, y: 0}
     boneReadOnly: 0
   platformSettings:
   - name: DefaultTexturePlatform
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -7894,6 +7852,7 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: Standalone
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -7915,6 +7874,8 @@ ScriptedImporter:
   skeletonAssetReferenceID: 8f519a0f7487d41cebc10ff177ee1436
   pipeline: {instanceID: 0}
   pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
   spriteCategoryList:
     categories: []
   spritePackingTag: 
@@ -7929,8 +7890,8 @@ ScriptedImporter:
     layerID: 29
     mosaicPosition: {x: 907, y: 77}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: arm L
     spriteName: arm L
     isGroup: 0
@@ -7939,8 +7900,8 @@ ScriptedImporter:
     layerID: 28
     mosaicPosition: {x: 591, y: 620}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: hand L bottom
     spriteName: hand L bottom
     isGroup: 0
@@ -7949,8 +7910,8 @@ ScriptedImporter:
     layerID: 27
     mosaicPosition: {x: 907, y: 4}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: hair front
     spriteName: hair front
     isGroup: 0
@@ -7959,18 +7920,18 @@ ScriptedImporter:
     layerID: 26
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: mouth
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 11edd0b4a925869428e6a76812f07a91
     layerID: 25
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 0
+    isVisible: 1
   - name: mouth open
     spriteName: mouth open
     isGroup: 0
@@ -7979,8 +7940,8 @@ ScriptedImporter:
     layerID: 24
     mosaicPosition: {x: 150, y: 1006}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: mouth teeth
     spriteName: mouth teeth
     isGroup: 0
@@ -7989,8 +7950,8 @@ ScriptedImporter:
     layerID: 23
     mosaicPosition: {x: 955, y: 151}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: mouth normal
     spriteName: mouth normal
     isGroup: 0
@@ -7999,18 +7960,18 @@ ScriptedImporter:
     layerID: 22
     mosaicPosition: {x: 955, y: 130}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: eye R
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 5234baa4c510cb84db068404bf951038
     layerID: 20
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 0
+    isVisible: 1
   - name: eye R closed
     spriteName: eye R closed
     isGroup: 0
@@ -8019,8 +7980,8 @@ ScriptedImporter:
     layerID: 19
     mosaicPosition: {x: 995, y: 4}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: eye R open
     spriteName: eye R open
     isGroup: 0
@@ -8029,18 +7990,18 @@ ScriptedImporter:
     layerID: 18
     mosaicPosition: {x: 907, y: 175}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: eye L
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 7f8a3ff755b35c44d8a2b7cd3ea5c27e
     layerID: 16
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 0
+    isVisible: 1
   - name: eye L closed
     spriteName: eye L closed
     isGroup: 0
@@ -8049,8 +8010,8 @@ ScriptedImporter:
     layerID: 15
     mosaicPosition: {x: 907, y: 130}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: eye L open
     spriteName: eye L open
     isGroup: 0
@@ -8059,8 +8020,8 @@ ScriptedImporter:
     layerID: 14
     mosaicPosition: {x: 146, y: 872}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: head
     spriteName: head
     isGroup: 0
@@ -8069,8 +8030,8 @@ ScriptedImporter:
     layerID: 12
     mosaicPosition: {x: 4, y: 774}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: neck element
     spriteName: neck element
     isGroup: 0
@@ -8079,8 +8040,8 @@ ScriptedImporter:
     layerID: 11
     mosaicPosition: {x: 4, y: 951}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: coat front
     spriteName: coat front
     isGroup: 0
@@ -8089,8 +8050,8 @@ ScriptedImporter:
     layerID: 10
     mosaicPosition: {x: 591, y: 256}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: neck
     spriteName: neck
     isGroup: 0
@@ -8099,8 +8060,8 @@ ScriptedImporter:
     layerID: 9
     mosaicPosition: {x: 146, y: 774}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: torso
     spriteName: torso
     isGroup: 0
@@ -8109,8 +8070,8 @@ ScriptedImporter:
     layerID: 8
     mosaicPosition: {x: 228, y: 399}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: leg L
     spriteName: leg L
     isGroup: 0
@@ -8119,8 +8080,8 @@ ScriptedImporter:
     layerID: 7
     mosaicPosition: {x: 455, y: 256}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: leg R
     spriteName: leg R
     isGroup: 0
@@ -8129,8 +8090,8 @@ ScriptedImporter:
     layerID: 6
     mosaicPosition: {x: 455, y: 641}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: coat back
     spriteName: coat back
     isGroup: 0
@@ -8139,8 +8100,8 @@ ScriptedImporter:
     layerID: 5
     mosaicPosition: {x: 4, y: 399}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: shoulder plate R
     spriteName: shoulder plate R
     isGroup: 0
@@ -8149,8 +8110,8 @@ ScriptedImporter:
     layerID: 4
     mosaicPosition: {x: 150, y: 951}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: hand R top
     spriteName: hand R top
     isGroup: 0
@@ -8159,8 +8120,8 @@ ScriptedImporter:
     layerID: 3
     mosaicPosition: {x: 591, y: 945}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: arm R
     spriteName: arm R
     isGroup: 0
@@ -8169,8 +8130,8 @@ ScriptedImporter:
     layerID: 2
     mosaicPosition: {x: 710, y: 256}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   - name: hair back
     spriteName: hair back
     isGroup: 0
@@ -8179,8 +8140,8 @@ ScriptedImporter:
     layerID: 1
     mosaicPosition: {x: 455, y: 4}
     flatten: 0
-    isImported: 0
-    isVisible: 0
+    isImported: 1
+    isVisible: 1
   sharedRigPSDLayers:
   - name: shoulder plate L
     spriteName: shoulder plate L
@@ -8443,6 +8404,9 @@ ScriptedImporter:
     isImported: 1
     isVisible: 1
   pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: witchgirl Texture
   prefabAssetName: witchgirl Prefab

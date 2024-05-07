@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class TrapWallBehavior : Trap {
+public class WallTrap : Trap {
   [SerializeField] private Rigidbody2D rb;
   [SerializeField] private float timeToDestroy = 2f;
 

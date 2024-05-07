@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class TrapBrickBehavior : Trap {
+public class BrickTrap : Trap {
   [SerializeField] private SpriteRenderer spriteRenderer;
   [SerializeField] private Rigidbody2D rb;
   [SerializeField] private float timeToDestroy = 2f;

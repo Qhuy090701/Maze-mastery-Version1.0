@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class WinObject : MonoBehaviour {
+public class GameState : MonoBehaviour {
   public WinState winState;
 
   public enum WinState {

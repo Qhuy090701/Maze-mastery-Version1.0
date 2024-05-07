@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WinUi : MonoBehaviour {
+public class ControlStateWin : MonoBehaviour {
   
   public void NextLevel(int level) {
     SceneManager.LoadScene(level);
