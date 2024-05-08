@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1df57442c2c47b64d97ba03e8839a833, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 952729e18b2462d45a7d9c43208a264a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -593,7 +593,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1df57442c2c47b64d97ba03e8839a833, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 952729e18b2462d45a7d9c43208a264a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1744,6 +1744,10 @@ PrefabInstance:
       propertyPath: comingSoonUi
       value: 
       objectReference: {fileID: 8261309379508697715, guid: bf77b49f60da3ca49a283ccdb34a06f0, type: 3}
+    - target: {fileID: 3806811836574641943, guid: 4123bc5a6030b08428d930a6219e8d82, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 952729e18b2462d45a7d9c43208a264a, type: 3}
     - target: {fileID: 3956313496419812485, guid: 4123bc5a6030b08428d930a6219e8d82, type: 3}
       propertyPath: m_Name
       value: Board Play Game (2)

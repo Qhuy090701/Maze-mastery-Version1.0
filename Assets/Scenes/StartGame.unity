@@ -527,12 +527,12 @@ SpriteRenderer:
   m_SortingLayerID: 1138718431
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6a4802cfb9f5b7b41bf2efe9afb99d15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d625552ff40d51499ab7be9a86c52ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1, y: 1.2}
+  m_Size: {x: 0.7, y: 0.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f96d6ec61b9c6c46b34ce645b43ec7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveState: 1
+  moveState: 0
   player: {fileID: 867883181}
 --- !u!114 &867883181
 MonoBehaviour:
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 37d1c03d3738e6044935ffc8b111ea2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59dbe91c296415b478ca6679b170b0ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -44,6 +44,11 @@ public class PlayerHealth : MonoBehaviour {
     if (PlayerPrefs.HasKey(Constants.PrefsKey_PlayerHealth)) {
       player.playerData.maxHealth = PlayerPrefs.GetInt(Constants.PrefsKey_PlayerHealth);
     }
+        else
+        {
+            player.maxHealth = 10;
+            player.playerData.maxHealth = player.maxHealth;
+        }
   }
 
   public void ResetHealth() {
